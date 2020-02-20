@@ -12,6 +12,7 @@
   <% @posts.each do |post| %>
     <a href="/users/<%= post.user.id %>"><%= post.user.email %></a>
     <p><a href="/posts/<%= post.id %>"><%= post.content %></a></p>
+    (<%= post.liked_users.count %>)
   <% end %>
 
 <% else %>
